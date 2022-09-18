@@ -71,5 +71,20 @@
     {% endfor %}
 </div>
 
+<div style="display: flex; justify-content: space-between">
+    {% for comment in comments %}
+        <div style="text-align: center; height: 150px; width: 300px;">
+            {% if comment.stars > 2 %}
+                <h3 style="color: green">{{ comment.Nikname }}</h3>
+            {% else %}
+                <h3 style="color: red">{{ comment.Nikname }}</h3>
+            {% endif %}
+            <h5>{{ comment.comment }}</h5>
+            <p>Stars: {{ comment.stars }}</p>
+            <p>Type:comments.type }}</p>
+        </div>
+    {% endfor %}
+</div>
+
 </body>
 </html>
